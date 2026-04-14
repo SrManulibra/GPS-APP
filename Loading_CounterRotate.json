@@ -1,32 +1,67 @@
 {
-  "type": "spinner",
-  "size": 200,
-  "background": "#f0f0f0",
+  "type": "circular_loader",
+  "size": 512,
+  "background": "#f8f9fb",
+  "center": {
+    "radius": 28,
+    "color": "#1d3557"
+  },
   "rings": [
     {
-      "radius": 80,
-      "width": 12,
-      "color": "#283c5a",
-      "arcLength": 140,
-      "speed": 0.8
+      "name": "outer_ring",
+      "radius": 210,
+      "strokeWidth": 18,
+      "color": "#1d3557",
+      "opacity": 0.9,
+      "arc": {
+        "length": 220,
+        "gap": 140
+      },
+      "animation": {
+        "rotationSpeed": 0.4,
+        "direction": "clockwise",
+        "easing": "linear"
+      }
     },
     {
-      "radius": 60,
-      "width": 10,
-      "color": "#c8cdd2",
-      "arcLength": 360,
-      "speed": 0
+      "name": "middle_ring",
+      "radius": 150,
+      "strokeWidth": 16,
+      "color": "#8896a7",
+      "opacity": 0.7,
+      "arc": {
+        "length": 180,
+        "gap": 180
+      },
+      "animation": {
+        "rotationSpeed": 0.6,
+        "direction": "counterclockwise",
+        "easing": "ease-in-out"
+      }
     },
     {
-      "radius": 40,
-      "width": 8,
-      "color": "#d5dbe0",
-      "arcLength": 360,
-      "speed": 0
+      "name": "inner_ring",
+      "radius": 100,
+      "strokeWidth": 14,
+      "color": "#ff6b6b",
+      "opacity": 0.85,
+      "arc": {
+        "length": 160,
+        "gap": 200
+      },
+      "animation": {
+        "rotationSpeed": 0.8,
+        "direction": "clockwise",
+        "easing": "ease-in-out"
+      }
     }
   ],
+  "style": {
+    "lineCap": "round",
+    "antiAliasing": true
+  },
   "animation": {
-    "frames": 24,
+    "fps": 30,
     "loop": true
   }
 }
